@@ -102,7 +102,7 @@ namespace Ciklusok_gyakorlasa
             }
             */
 
-            // 5. feladat: Írj programot, mely beolvassa egy kör átmérőjét, és kiírja a kör kerületét és
+            /* 5. feladat: Írj programot, mely beolvassa egy kör átmérőjét, és kiírja a kör kerületét és
             // területét! A pi értékének meghatározásához használd a Math.PI értéket!
             // Változók
             int atmero = 0;
@@ -116,6 +116,62 @@ namespace Ciklusok_gyakorlasa
             terulet = atmero * atmero * Math.PI / 4;
 
             Console.WriteLine($"Kerület: {kerulet:F2}, terület: {terulet:F2}");
+            */
+
+            /* 6. feladat: Írj programot, mely beolvassa a másodfokú egyenlet együtthatóit, és kiírja, hogy az
+            // egyenletnek van-e megoldása! Ha van írassuk ki!
+            // Változók
+            int aEgy = 0;
+            int bEgy = 0;
+            int cEgy = 0;
+            double diszk = 0.0d;
+            double elso = 0.0d;
+            double masodik = 0.0d;
+
+            Console.Write("Kérem az első együtthatót: ");
+            aEgy = Int32.Parse(Console.ReadLine());
+            Console.Write("Kérem a második együtthatót: ");
+            bEgy = Int32.Parse(Console.ReadLine());
+            Console.Write("Kérem a harmadik együtthatót: ");
+            cEgy = Int32.Parse(Console.ReadLine());
+
+            diszk = bEgy * bEgy - 4 * aEgy * cEgy;
+
+            if (diszk < 0)
+            {
+                Console.WriteLine("Nincs megoldás!");
+            }
+            else if (diszk == 0)
+            {
+                elso = ((-1) * bEgy + Math.Sqrt(diszk)) / (2 * aEgy);
+                Console.WriteLine("Létezik megoldás!");
+                Console.WriteLine($"A megoldás: {elso}");
+            }
+            else
+            {
+                elso = ((-1) * bEgy + Math.Sqrt(diszk)) / (2 * aEgy);
+                masodik = ((-1) * bEgy - Math.Sqrt(diszk)) / (2 * aEgy);
+                Console.WriteLine("Létezik megoldás!");
+                Console.WriteLine($"Az első megoldás: {elso}");
+                Console.WriteLine($"A második megoldás: {masodik}");
+            }
+            */
+
+            // 7. feladat: Írj programot, mely beolvassa egy derékszögű háromszög két befogóját, és megadja
+            // az átfogójának a hosszát!Az átfogót 2 tizedesjeggyel add meg!
+            // Változók deklarálása
+            double aOldal = 0.0d;
+            double bOldal = 0.0d;
+            double cOldal = 0.0d;
+
+            // Változók definiálása
+            Console.Write("A oldal: ");
+            aOldal = Double.Parse(Console.ReadLine());
+            Console.Write("B oldal: ");
+            bOldal = Double.Parse(Console.ReadLine());
+
+            cOldal = Math.Sqrt(Math.Pow(aOldal, 2) + Math.Pow(bOldal,2));
+            Console.WriteLine($"A harmadik oldal: {cOldal}");
 
             Console.ReadKey(true);
         }
